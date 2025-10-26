@@ -4,7 +4,7 @@
 
 一个基于 Exa API 的本地化网页搜索工具，专注于高效获取新闻和文章内容，并支持将搜索结果一键导出为格式化的 Markdown 文档。
 
-#页面展示链接：
+## 页面展示链接：
 
 https://starttown.github.io/GetNewsExa-HTML/
 
@@ -76,7 +76,7 @@ npm.cmd install express cors node-fetch@2
 4.  **配置 API Key**
     - 使用文本编辑器打开项目根目录下的 `index.html`。
     - 找到 JavaScript 代码顶部的配置区域。
-    - 将 `"exa_..."` 替换为您从 [Exa.ai](https://exa.ai) 获取的真实 API Key。
+    - 将 `"your key from https://exa.ai/"` 替换为您从 [Exa.ai](https://exa.ai) 获取的真实 API Key。
 
 javascript
 // =================== 配置区域 ===================
