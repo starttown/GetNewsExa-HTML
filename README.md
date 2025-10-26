@@ -48,29 +48,36 @@
 
 1.  **克隆项目**
    
-bash
+、、、bash
+
 git clone https://github.com/starttown/GetNewsExa-HTML.git
+
 cd GetNewsExa-HTML
+
+、、、
 
 
 
 2.  **安装依赖**
     项目依赖仅用于代理服务器，运行以下命令安装：
-bash
+	
+、、、bash
+
 npm.cmd install express cors node-fetch@2
 
+、、、
 
 
-3.  **配置 API Key**
+
+4.  **配置 API Key**
     - 使用文本编辑器打开项目根目录下的 `index.html`。
     - 找到 JavaScript 代码顶部的配置区域。
     - 将 `"exa_..."` 替换为您从 [Exa.ai](https://exa.ai) 获取的真实 API Key。
 
 javascript
 // =================== 配置区域 ===================
-// 在这里粘贴您的 Exa API Key (以 exa_ 开头)
-const API_KEY = “exa_…”; // <— 请在此处替换为您的真实 API Key
-// ================================================
+// 在这里粘贴您的 Exa API Key
+const API_KEY = "your key from https://exa.ai/"; // <--- 请在此处替换为您的真实 API Key// ================================================
 
 
     > **安全警告**：请妥善保管您的 API Key，**切勿**将配置好真实 Key 的 `index.html` 文件提交到公共代码仓库。
@@ -79,16 +86,18 @@ const API_KEY = “exa_…”; // <— 请在此处替换为您的真实 API Key
     您需要同时启动两个服务，建议开启两个终端窗口。
 
     - **终端 1：启动代理服务器**
-bash
+、、、bash
 node proxy-server.js
+、、、
 
 
         成功启动后会提示：`Proxy server running at http://localhost:3001`
 
 
     - **终端 2：启动前端服务器**
-bash
+、、、bash
 npx.cmd http-server --cors -p 8080
+、、、
 
 
         成功启动后会提示：`Available on: http://127.0.0.1:8080`
@@ -98,10 +107,13 @@ npx.cmd http-server --cors -p 8080
 
 ## 📁 项目结构
 
-.
+
 ├── index.html # 主应用页面 (包含所有前端代码)
+
 ├── proxy-server.js # Node.js 后端代理服务器
+
 ├── LICENSE # 开源许可证文件
+
 └── README.md # 项目说明文档 (本文件)
 
 
@@ -140,7 +152,7 @@ npx.cmd http-server --cors -p 8080
 <summary><strong>Q: 搜索时提示 "x-api-key header is invalid"？</strong></summary>
 
 **A:** 这表示您的 API Key 无效。请检查：
-1. 您在 `index.html` 中配置的 Key 是否是正确的 Exa API Key（通常以 `exa_` 开头）。
+1. 您在 `index.html` 中配置的 Key 是否是正确的 Exa API Key。
 2. Key 是否已过期或被禁用。
 3. 复制时是否有多余的空格或换行符。
 </details>
@@ -150,7 +162,7 @@ npx.cmd http-server --cors -p 8080
 
 **A:** 这表示您的电脑上已有其他程序在使用 8080 端口。您可以：
 1. 关闭占用该端口的程序。
-2. 或者使用另一个端口，例如：`npx http-server --cors -p 8081`，然后在浏览器中访问 `http://localhost:8081`。
+2. 或者使用另一个端口，例如：`npx.cmd http-server --cors -p 8081`，然后在浏览器中访问 `http://localhost:8081`。
 </details>
 
 ## 🌐 部署说明
